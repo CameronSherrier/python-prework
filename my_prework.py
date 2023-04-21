@@ -29,16 +29,16 @@ max_num_in_list(a_list='')
 # but not divisible by 100, unless it is also divisible by 400. The return should be boolean Type 
 # (true/false).
 
-a_year = True
-def is_lead_year(a_year):
-    if a_year % 4 == 0:
+def is_leap_year(a_year):
+    if a_year % 4 == 0 and a_year % 400 == 0:
         a_year = True
-        print(a_year)
-    else:
+        return a_year
+    elif a_year % 4 == 0 and a_year % 400 != 0:
         a_year = False
-        print(a_year)
+        return a_year
 
-is_lead_year(1988)    
+answer = is_leap_year(1900)
+print(answer)  
 
 # Question 5
 # Write a function to check to see if all numbers in list are consecutive numbers. 
